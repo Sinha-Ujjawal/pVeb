@@ -290,7 +290,7 @@ class PVeb:
             ((self._lb + self._root.min), self._root.min_data) if self._root else None
         )
 
-    def extractMin(self):
+    def extract_min(self):
         if self._root:
             root = PVeb._pop(self._root, self._root.min, self._u, self._threshold)
             new = PVeb(lb=self._lb, ub=self._ub, c=self._c)
@@ -305,7 +305,7 @@ class PVeb:
             ((self._lb + self._root.max), self._root.max_data) if self._root else None
         )
 
-    def extractMax(self):
+    def extract_max(self):
         if self._root:
             root = PVeb._pop(self._root, self._root.max, self._u, self._threshold)
             new = PVeb(lb=self._lb, ub=self._ub, c=self._c)
